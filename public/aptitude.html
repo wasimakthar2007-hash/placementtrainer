@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aptitude — SkillPilot</title>
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+<body data-page="aptitude" class="page-apt">
+  <main class="wrap">
+    <div id="site-notice" class="banner hidden"></div>
+    <div id="announcements" data-location="aptitude"></div>
+    <section class="card">
+      <h2>Aptitude assessment</h2>
+      <p class="muted">Tests are built automatically from the aptitude bank. Admins do not pick items per student. You never see source question IDs — a temporary test instance is created for your session only.</p>
+      <div class="grid grid-3" id="meta"></div>
+      <form id="start-form" class="btn-row">
+        <label>Module
+          <select id="difficulty">
+            <option value="">Mixed (quant / logic / verbal)</option>
+            <option value="easy">Quantitative (easy)</option>
+            <option value="medium">Logical (medium)</option>
+            <option value="hard">Advanced (hard)</option>
+          </select>
+        </label>
+        <label>Questions
+          <input id="count" type="number" min="4" max="20" value="8">
+        </label>
+        <button class="btn apt" type="submit">Generate my test</button>
+      </form>
+      <div id="loading" class="center hidden"><div class="spinner"></div></div>
+      <div id="error" class="banner err hidden"></div>
+      <h3 style="margin-top:24px">Aptitude leaderboard</h3>
+      <table><thead><tr><th>Learner</th><th>Accuracy</th><th>Attempts</th></tr></thead><tbody id="board"></tbody></table>
+      <p id="badges" class="muted"></p>
+      <div class="shared-links" id="shared-links" data-location="aptitude"></div>
+    </section>
+  </main>
+  <script src="/js/api.js"></script>
+  <script src="/js/shell.js"></script>
+  <script src="/js/aptitude.js"></script>
+</body>
+</html>

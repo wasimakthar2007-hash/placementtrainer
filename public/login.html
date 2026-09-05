@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign in — SkillPilot</title>
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+<body data-page="login">
+  <div class="auth-shell">
+    <section class="card auth-card">
+      <h1>SkillPilot</h1>
+      <p class="muted">Sign in to continue your placement prep.</p>
+      <form id="login-form" novalidate>
+        <label for="username">Username or email</label>
+        <input id="username" name="username" autocomplete="username" required minlength="3" maxlength="80">
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" autocomplete="current-password" required minlength="8">
+        <div class="row-inline">
+          <label><input type="checkbox" id="remember"> Remember me</label>
+          <a href="/forgot-password">Forgot password</a>
+        </div>
+        <div id="form-error" class="banner err hidden"></div>
+        <div class="btn-row">
+          <button class="btn" type="submit">Sign in</button>
+          <a class="btn secondary" href="/register">Create account</a>
+        </div>
+      </form>
+      <p class="muted" style="margin-top:16px">Demo user <code>demo</code> / <code>Demo@123</code> · Admin <code>admin</code> / <code>Admin@123</code></p>
+    </section>
+  </div>
+  <script src="/js/api.js"></script>
+  <script src="/js/shell.js"></script>
+  <script src="/js/login.js"></script>
+</body>
+</html>

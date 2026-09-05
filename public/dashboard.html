@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard — SkillPilot</title>
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+<body data-page="dashboard">
+  <main class="wrap">
+    <div id="site-notice" class="banner hidden"></div>
+    <div id="announcements" data-location="dashboard"></div>
+    <section class="card">
+      <h2>Dashboard</h2>
+      <p class="muted hero" id="welcome">Loading your workspace…</p>
+      <div class="grid grid-3" id="stats"></div>
+      <div class="grid grid-3" style="margin-top:16px">
+        <a class="tile dsa" href="/dsa"><h3>DSA</h3><p class="muted">Algorithms, complexity, coding challenges, DSA-only progress.</p></a>
+        <a class="tile career" href="/career-resources"><h3>Career Resources</h3><p class="muted">Interview tips, resume guidance, soft skills.</p></a>
+        <a class="tile apt" href="/aptitude"><h3>Aptitude</h3><p class="muted">Timed auto-generated tests. Questions never listed from the raw bank.</p></a>
+      </div>
+      <div class="shared-links" id="shared-links" data-location="dashboard"></div>
+    </section>
+  </main>
+  <script src="/js/api.js"></script>
+  <script src="/js/shell.js"></script>
+  <script src="/js/dashboard.js"></script>
+</body>
+</html>

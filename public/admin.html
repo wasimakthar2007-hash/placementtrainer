@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin — SkillPilot</title>
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+<body data-page="admin" class="page-admin">
+  <main class="wrap">
+    <div id="site-notice" class="banner hidden"></div>
+    <div id="announcements" data-location="admin"></div>
+    <section class="card">
+      <h2>Admin panel</h2>
+      <p class="muted">Question banks are pre-populated. Aptitude tests auto-select unique items per session — you do not assign questions to users.</p>
+      <div class="grid grid-3" id="overview"></div>
+    </section>
+    <section class="card" style="margin-top:16px">
+      <h3>Shareable links</h3>
+      <p class="muted">Generated links work across every page via <code>/go/&lt;slug&gt;</code>. Copy and distribute them; analytics record clicks and unique visitors.</p>
+      <form id="link-form" class="grid grid-2">
+        <label>Title <input id="link-title" required></label>
+        <label>URL or in-app path <input id="link-url" required placeholder="/dsa or https://..."></label>
+        <label>Show on
+          <select id="link-page">
+            <option value="all">All pages</option>
+            <option value="dashboard">Dashboard</option>
+            <option value="dsa">DSA</option>
+            <option value="career-resources">Career Resources</option>
+            <option value="aptitude">Aptitude</option>
+            <option value="admin">Admin</option>
+            <option value="profile">Profile</option>
+            <option value="settings">Settings</option>
+            <option value="results">Results</option>
+          </select>
+        </label>
+        <label>Expires <input id="link-exp" type="datetime-local"></label>
+        <label>Usage limit <input id="link-limit" type="number" min="1" placeholder="Unlimited"></label>
+        <div></div>
+        <button class="btn admin" type="submit">Create link</button>
+      </form>
+      <div id="link-error" class="banner err hidden"></div>
+      <table style="margin-top:16px">
+        <thead>
+          <tr><th>Title</th><th>Location</th><th>Clicks</th><th>Unique</th><th>Actions</th></tr>
+        </thead>
+        <tbody id="links-body"></tbody>
+      </table>
+      <div id="link-analytics" class="muted" style="margin-top:12px"></div>
+    </section>
+    <section class="card" style="margin-top:16px">
+      <h3>Push announcement</h3>
+      <form id="ann-form">
+        <label>Title <input id="ann-title" required></label>
+        <label>Body <textarea id="ann-body" rows="3" required></textarea></label>
+        <label>Target page
+          <select id="ann-target">
+            <option value="all">All</option>
+            <option value="dashboard">Dashboard</option>
+            <option value="dsa">DSA</option>
+            <option value="career-resources">Career</option>
+            <option value="aptitude">Aptitude</option>
+          </select>
+        </label>
+        <button class="btn admin" type="submit">Broadcast</button>
+      </form>
+    </section>
+    <section class="card" style="margin-top:16px">
+      <h3>Global settings</h3>
+      <form id="set-form">
+        <label><input type="checkbox" id="maint"> Maintenance mode</label>
+        <label>Site notice <input id="notice"></label>
+        <label>Default aptitude question count <input id="apt-count" type="number" min="4" max="20"></label>
+        <button class="btn admin" type="submit">Save settings</button>
+      </form>
+      <p id="set-msg" class="muted"></p>
+    </section>
+    <section class="card" style="margin-top:16px">
+      <h3>Question bank (read-only counts)</h3>
+      <p id="q-counts" class="muted"></p>
+      <h3>Users</h3>
+      <table><thead><tr><th>User</th><th>Email</th><th>Role</th></tr></thead><tbody id="users-body"></tbody></table>
+      <div class="shared-links" id="shared-links" data-location="admin"></div>
+    </section>
+  </main>
+  <script src="/js/api.js"></script>
+  <script src="/js/shell.js"></script>
+  <script src="/js/admin.js"></script>
+</body>
+</html>

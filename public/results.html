@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Results — SkillPilot</title>
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+<body data-page="results">
+  <main class="wrap">
+    <div id="announcements" data-location="results"></div>
+    <section class="card">
+      <h2>Results</h2>
+      <p id="summary" class="hero"></p>
+      <div class="btn-row">
+        <a class="btn" href="/dashboard">Dashboard</a>
+        <a class="btn secondary" href="/aptitude">Another aptitude test</a>
+      </div>
+      <h3>Recent activity</h3>
+      <table><thead><tr><th>When</th><th>Category</th><th>Result</th></tr></thead><tbody id="recent"></tbody></table>
+      <div class="shared-links" id="shared-links" data-location="results"></div>
+    </section>
+  </main>
+  <script src="/js/api.js"></script>
+  <script src="/js/shell.js"></script>
+  <script src="/js/results.js"></script>
+</body>
+</html>

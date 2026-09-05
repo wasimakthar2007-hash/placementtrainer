@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aptitude test — SkillPilot</title>
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+<body data-page="aptitude-test" class="page-apt">
+  <main class="wrap">
+    <section class="card">
+      <h2>Live aptitude test</h2>
+      <p class="muted">This page only loads your temporary instance. Direct bank URLs are not accepted.</p>
+      <div id="loading" class="center"><div class="spinner"></div></div>
+      <div id="error" class="banner err hidden"></div>
+      <div id="quiz" class="hidden">
+        <p class="muted" id="progress-line"></p>
+        <h3 id="q-text"></h3>
+        <div id="options"></div>
+        <p id="feedback" class="muted"></p>
+        <button class="btn apt" id="next" type="button">Next</button>
+      </div>
+    </section>
+  </main>
+  <script src="/js/api.js"></script>
+  <script src="/js/shell.js"></script>
+  <script src="/js/aptitude-test.js"></script>
+</body>
+</html>

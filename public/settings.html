@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings — SkillPilot</title>
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+<body data-page="settings">
+  <main class="wrap">
+    <div id="announcements" data-location="settings"></div>
+    <section class="card">
+      <h2>Settings</h2>
+      <p class="muted">Session timeout is enforced on the server (idle logout). Use Sign out from the header to revoke the current token immediately.</p>
+      <div id="flags"></div>
+      <div class="shared-links" id="shared-links" data-location="settings"></div>
+    </section>
+  </main>
+  <script src="/js/api.js"></script>
+  <script src="/js/shell.js"></script>
+  <script src="/js/settings.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Career Resources — SkillPilot</title>
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+<body data-page="career" class="page-career">
+  <main class="wrap">
+    <div id="site-notice" class="banner hidden"></div>
+    <div id="announcements" data-location="career-resources"></div>
+    <section class="card">
+      <h2>Career Resources</h2>
+      <p class="muted">Interview tips, resume guidance, company-prep habits, and a separate soft-skills question bank.</p>
+      <div id="articles"></div>
+      <div class="grid grid-3" id="meta"></div>
+      <form id="start-form" class="btn-row">
+        <label>Difficulty
+          <select id="difficulty">
+            <option value="">Any</option>
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+        </label>
+        <label>Count
+          <input id="count" type="number" min="1" max="20" value="6">
+        </label>
+        <button class="btn career" type="submit">Start soft-skills check</button>
+      </form>
+      <div id="loading" class="center hidden"><div class="spinner"></div></div>
+      <div id="error" class="banner err hidden"></div>
+      <div id="quiz" class="hidden">
+        <h3 id="q-text"></h3>
+        <div id="options"></div>
+        <p id="feedback" class="muted"></p>
+        <button class="btn career" id="next" type="button">Next</button>
+      </div>
+      <div id="done" class="hidden">
+        <h3>Assessment complete</h3>
+        <p id="score-line"></p>
+        <a class="btn career" href="/results">View results</a>
+      </div>
+      <h3 style="margin-top:24px">Career leaderboard</h3>
+      <table><thead><tr><th>Learner</th><th>Accuracy</th><th>Attempts</th></tr></thead><tbody id="board"></tbody></table>
+      <p id="badges" class="muted"></p>
+      <div class="shared-links" id="shared-links" data-location="career-resources"></div>
+    </section>
+  </main>
+  <script src="/js/api.js"></script>
+  <script src="/js/shell.js"></script>
+  <script src="/js/career.js"></script>
+  <script src="/js/practice.js"></script>
+</body>
+</html>

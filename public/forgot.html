@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forgot password — SkillPilot</title>
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+<body data-page="forgot">
+  <div class="auth-shell">
+    <section class="card auth-card">
+      <h1>Forgot password</h1>
+      <p class="muted">Enter your account email. If it exists, a reset link is generated (shown here in this demo environment).</p>
+      <form id="forgot-form">
+        <label for="email">Email</label>
+        <input id="email" type="email" required>
+        <div id="form-error" class="banner err hidden"></div>
+        <div id="form-ok" class="banner hidden"></div>
+        <div class="btn-row">
+          <button class="btn" type="submit">Send reset link</button>
+          <a class="btn secondary" href="/login">Back to sign in</a>
+        </div>
+      </form>
+    </section>
+  </div>
+  <script src="/js/api.js"></script>
+  <script src="/js/shell.js"></script>
+  <script src="/js/forgot.js"></script>
+</body>
+</html>

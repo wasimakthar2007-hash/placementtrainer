@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reset password — SkillPilot</title>
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+<body data-page="reset">
+  <div class="auth-shell">
+    <section class="card auth-card">
+      <h1>Set a new password</h1>
+      <form id="reset-form">
+        <label for="password">New password</label>
+        <input id="password" type="password" required minlength="8">
+        <div id="form-error" class="banner err hidden"></div>
+        <div id="form-ok" class="banner hidden"></div>
+        <div class="btn-row">
+          <button class="btn" type="submit">Update password</button>
+          <a class="btn secondary" href="/login">Back to sign in</a>
+        </div>
+      </form>
+    </section>
+  </div>
+  <script src="/js/api.js"></script>
+  <script src="/js/shell.js"></script>
+  <script src="/js/reset.js"></script>
+</body>
+</html>
